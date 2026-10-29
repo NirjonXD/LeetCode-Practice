@@ -3,7 +3,6 @@ name: Sync LeetCode
 on:
   workflow_dispatch:
   schedule:
-    
     - cron: '0 0 * * *'
 
 jobs:
@@ -11,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync LeetCode Solutions
-       uses: joshcai/leetcode-sync@v1.5
+        uses: joshcai/leetcode-sync@v1.5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           leetcode_session: ${{ secrets.LEETCODE_SESSION }}
